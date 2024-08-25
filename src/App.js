@@ -1,24 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import MobilesPage from "./pages/Mobiles";
+import { loader as mobileListLoader } from "./pages/Mobiles";
+import HomePage from "./pages/Home";
+import CartPage from "./pages/Cart";
+import RootLayout from "./pages/Root";
+import MobileDetailPage from "./pages/MobileDetail";
+import MobilesRootLayout from "./pages/MobilesRootLayout";
+import ErrorPage from "./pages/Error";
+import { Provider } from "react-redux";
+import store from "./store/store";
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    errorElement: <ErrorPage />,
+    children: [
+      { index: true, element: <HomePage /> },
+      {
+        path: "mobiles",
+        element: <MobilesRootLayout />,
+        children: [
+          { index: true, element: <MobilesPage />, loader: mobileListLoader },
+          {
+            path: ":mobileId",
+            element: <MobileDetailPage />,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    path: "cart",
+    element: <CartPage />,
+  },
+]);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <RouterProvider router={router} />;
+    </Provider>
   );
 }
 

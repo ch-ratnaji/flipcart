@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.heading {
+  padding-bottom: 56px;
+  min-width: 978px;
+  position: relative;
+}
+.heading1 {
+  position: fixed;
+  display: flex;
+  flex: auto;
+  will-change: transform;
+  width: 100%;
+  height: 56px;
+  background-color: #2874f0;
+  color: #f0f0f0;
+  z-index: 10;
+  flex-direction: row;
+}
+
+.heading2 {
+  position: fixed;
+  top: 53px;
+  height: 30px;
+  background-color: #2874f0;
+  box-shadow: 0 2px 2.5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.mainNav {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.16);
+  position: relative;
+  min-height: 40px;
+  color: #000;
+  background-color: #fff;
+}
+
+.mainNav,
+.heading2 {
+  width: 100%;
+  z-index: 6;
+}
+
+.heading1 .side {
+  height: 100%;
+  min-width: 124px;
+  background-color: #2874f0;
+}
+
+.heading1 .contentContainer {
+  display: flex;
+  max-width: 1248px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #2874f0;
+}
+
+.heading1 .contentContainer .home1 {
+  display: flex;
+  justify-content: flex-end;
+  min-width: 137px;
+  align-items: center;
+  line-height: 20px;
+  font-size: 16px;
+  letter-spacing: 0.1px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.heading1 .contentContainer .b2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading1 .contentContainer a {
+  text-decoration: none;
+  color: inherit;
+  border: none;
+  outline: none;
+}
+
+.heading1 .contentContainer .content {
+  flex: 0 0 auto;
+  margin: 0 20px;
+  max-width: 150px;
+  align-content: center;
+  justify-content: flex-end;
+  display: flex;
+  background-color: #2874f0;
+}
+.content .r1 {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 100%;
+  line-height: 20px;
+  font-size: 16px;
+  letter-spacing: 0.1px;
+  font-weight: 500;
+  color: #fff;
+  /* user-select: none; */
+}
+
+.contentContainer a img {
+  display: block;
+}
+
+.headerFormSearch {
+  display: inline-block;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.23);
+  width: 100%;
+  height: 36px;
+  max-width: 564px;
+  position: relative;
+  padding: top 10px;
+}
+
+.inputContent {
+  display: flex;
+  justify-content: flex-start;
+  height: 100%;
+  min-width: 304px;
+  width: calc(100% - 540px);
+  margin: 0 auto 0 12px;
+  align-items: center;
+}
+.searchContainer {
+  display: flex;
+  justify-content: space-between;
+  flex: auto;
+  border-radius: 2px;
+  background-color: #fff;
+  width: 100%;
+}
+.searchTextBox {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+form .btn {
+  justify-content: flex-end;
+  border: 1px solid var(--color-white-bg);
+  background-color: var(--color-white-bg);
+  height: 36px;
+  width: 44px;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 4px 12px 0 8px;
+}
+svg[Style] {
+  width: 20;
+  height: 20;
+}
+
+svg:not(:root) {
+  overflow: hidden; /* This will still hide overflow content */
+}
+
+g[Style] {
+  fill: #2874f1;
+  fill-rule: evenodd;
+}
+
+:not(svg) {
+  transform-origin: 0px 0px;
+}
+
+g .pth {
+  fill: #2874f0;
+}
+
+.cartLink {
+  color: inherit;
+}
+
+.cartSvg {
+  width: 16px;
+  height: 16px;
+  margin: 0 8px;
+}
+
+.cartQuantity {
+  position: absolute;
+  left: 11px;
+  top: 7px;
+  text-align: center;
+  border-radius: 7px;
+  width: 18px;
+  height: 18px;
+  background-color: #ff6161;
+  border: 1px solid #fff;
+  font-weight: 400;
+  color: #f0f0f0;
+  line-height: 16px;
+  font-size: 12px;
+}
+
+.heading1 .contentContainer .content .r1 .r2 {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.heading1 .contentContainer .content .r1 .r2 a {
+  display: flex;
+
+  align-items: center;
+  line-height: 20px;
+  font-size: 16px;
+  letter-spacing: 0.1px;
+  font-weight: 500;
+  color: #fff;
+  position: relative;
+}
+
+.list {
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+  flex-grow: 1;
+  justify-content: center;
+  font-weight: 500;
+  height: 100%;
+  align-items: center;
+}
+
+.list a {
+  text-decoration: none;
+  color: #212121;
+}
+
+.list a:hover,
+.list a.active {
+  color: #2874f0;
+}
