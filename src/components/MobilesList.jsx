@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import classes from "./MobilesList.module.css";
 import { currencyFormatter } from "../util/formatting";
 import { useDispatch, useSelector } from "react-redux";
-import cartActions from "../store/cartSlice";
+import { cartActions } from "../store/cartSlice";
 import { fetchMobileList } from "../store/cart-actions.js";
 import { useEffect } from "react";
 
@@ -20,6 +20,11 @@ function MobilesList({ mobiles }) {
     console.log(mobilesList);
   }, [mobilesList]);
 
+  const addItemToCart = (e, itemId) => {
+    e.preventDefault();
+    dispatch(cartActions.addItem(itemId));
+  };
+
   return (
     <div className={classes.mobiles}>
       <h1>All Mobiles</h1>
@@ -35,9 +40,7 @@ function MobilesList({ mobiles }) {
                 <h2>{mobile.name}</h2>
                 <h3>{currencyFormatter.format(mobile.price)}</h3>
                 <p>{mobile.description}</p>
-                <button
-                  onClick={() => dispatch(cartActions.addItem(mobile.id))}
-                >
+                <button onClick={(e) => addItemToCart(e, mobile.id)}>
                   Add to Cart
                 </button>
               </div>

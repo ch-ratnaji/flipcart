@@ -27,11 +27,13 @@ function CartPage() {
         {cartItems.map((item) => (
           <CartItem
             key={item.id}
+            img={item.image}
             name={item.name}
             quantity={item.quantity}
             price={item.price}
-            onIncrease={() => dispatch(cartActions.addItem(item))}
+            onIncrease={() => dispatch(cartActions.addItem(item.id))}
             onDecrease={() => dispatch(cartActions.removeItem(item.id))}
+            onDelete={() => dispatch(cartActions.deleteItem(item.id))}
           />
         ))}
       </ul>

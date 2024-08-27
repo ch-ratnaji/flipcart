@@ -5,3 +5,123 @@ body {
   color: #212121;
   line-height: 1.4;
 }
+
+.cart-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.cart-item img {
+  width: 8.25%;
+  object-fit: cover;
+}
+
+.cart-item p {
+  margin-right: 40px;
+  padding: 5px;
+}
+
+.cart-item-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.cart-item button {
+  border: none;
+}
+
+.cart-item .delete-item button {
+  border: none;
+  padding: 5px 10px;
+}
+.cart-item .delete-item button:hover {
+  border: none;
+  color: #2874f0;
+  padding: 5px 10px;
+}
+
+.detail-container {
+  position: relative;
+  display: flex; /* Make the container a flexbox */
+  /* Ensure there's space between the two main children */
+  /* align-items: flex-start; Align items to the top */
+}
+
+.detail-img-buttons {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+
+  width: 35%; /* Keep the image container at 35% width */
+}
+
+.detail-img-buttons img,
+.detail-img-buttons .button-block {
+  width: 100%;
+  display: block;
+}
+
+.detail-img-buttons ul {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.detail-img-buttons li {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+}
+
+.detail-img-buttons .button1 {
+  padding: 18px 8px;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  width: 98%;
+  border: none;
+  float: left;
+  background: #ff9f00;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.detail-img-buttons .button2 {
+  background: #fb641b;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  border: none;
+  color: #fff;
+  padding: 18px 8px;
+  border-radius: 2px;
+  float: right;
+  width: 98%;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.detail-itemDetails {
+  position: absolute;
+  left: 550px;
+  top: 100px;
+  flex-grow: 1; /* Take up the remaining space */
+  margin-left: 20px; /* Add some space between the image and details */
+}
+
+.detail-itemDetails h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.detail-itemDetails h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.detail-itemDetails p {
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 400;
+}

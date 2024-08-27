@@ -25,7 +25,7 @@
 .heading2 {
   position: fixed;
   top: 53px;
-  height: 30px;
+  height: 5px;
   background-color: #2874f0;
   box-shadow: 0 2px 2.5px 0 rgba(0, 0, 0, 0.3);
 }
@@ -221,13 +221,16 @@ g .pth {
 
 .list {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   cursor: pointer;
   flex-grow: 1;
-  justify-content: center;
+  justify-content: flex-start;
   font-weight: 500;
   height: 100%;
   align-items: center;
+  font-size: medium;
+  padding-top: 7px;
+  list-style-type: none;
 }
 
 .list a {

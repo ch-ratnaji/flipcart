@@ -81,8 +81,8 @@ function MainNavigation() {
                         fill="#fff"
                       ></path>
                     </svg>
-                    <div className={classes.cartQuantity}>1</div>
-                    <span>{totalQuantity}</span>
+                    <div className={classes.cartQuantity}>{totalQuantity}</div>
+                    <span>Cart</span>
                   </NavLink>
                 </div>
               </div>
